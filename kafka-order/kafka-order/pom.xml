@@ -21,7 +21,7 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.base-domains</groupId>
+			<groupId>com.course</groupId>
 			<artifactId>kafka-base-domains</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
