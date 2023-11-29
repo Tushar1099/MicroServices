@@ -2,6 +2,7 @@ package com.course.kafkaorder.controller;
 
 import java.util.UUID;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,14 +16,9 @@ import com.course.kafkaorder.service.KafkaOrderProducer;
 @RequestMapping("/api/order")
 public class OrderController {
 
-	
+	@Autowired
 	private KafkaOrderProducer kafkaOrderProducer;
 
-	public OrderController(KafkaOrderProducer kafkaOrderProducer) {
-		super();
-		this.kafkaOrderProducer = kafkaOrderProducer;
-	}
-	
 	@PostMapping
 	public String sendMessage(@RequestBody Order order) {
 			
